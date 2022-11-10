@@ -27,7 +27,7 @@ app.use('/api', generalRoutes)
 
 // listen for requests
 app.listen(4006, () => {
-    console.log('listening on port 4005')
+    console.log('listening on port 4006')
     app.get('/', (req, res) => {
         res.send('hello to API')
     })

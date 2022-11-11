@@ -4,7 +4,6 @@ const cohere = require('cohere-ai');
 cohere.init(process.env.COHERE_API_KEY);
 
 const cohereClassification = async (req, res) => {
-    (async () => {
     const response = await cohere.classify({
         model: 'large',
         inputs: [req.body.inputs],
@@ -12,8 +11,6 @@ const cohereClassification = async (req, res) => {
     });
     console.log(`The confidence levels of the labels are ${JSON.stringify(response.body.classifications)}`);
     res.status(200).json(`The confidence levels of the labels are ${JSON.stringify(response.body.classifications)}`)
-
-    })();
 }
 
 module.exports = {

@@ -34,6 +34,7 @@ const cohereClassification = async (req, res) => {
     // res.status(200).json(openAIResponse)
 }
 
+
 module.exports = {
     cohereClassification
 }

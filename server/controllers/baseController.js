@@ -16,7 +16,15 @@ const cohereClassification = async (req, res) => {
     const prediction = response.body.classifications[0].prediction
     console.log("Prediction: " + prediction)
 
-    if (prediction === 'Cohere') {
+    if (prediction === 'Cohere Generate') {
+        res.status(200).json("Cohere (api not connected yet)")
+    }
+
+    if (prediction === 'Cohere Embed') {
+        res.statu(200).json("Cohere (api not connected yet)")
+    }
+
+    if (prediction === 'Cohere Classify') {
         res.status(200).json("Cohere (api not connected yet)")
     }
 

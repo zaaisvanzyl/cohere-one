@@ -15,6 +15,9 @@ const cohereClassification = async (req, res) => {
     const prompt = req.body.inputs
     const prediction = response.body.classifications[0].prediction
     console.log("Prediction: " + prediction)
+    const confidences = response.body.classifications[0].confidences
+    console.log(confidences)
+    res.status(200).json(response.body.classifications)
 
     if (prediction === 'Cohere Generate') {
         res.status(200).json("Cohere (api not connected yet)")
@@ -31,25 +34,19 @@ const cohereClassification = async (req, res) => {
     if (prediction === 'GPT-3') {
         const openAIResponse = await openAIGPT3(prompt)
         console.log("Openai response: " + openAIResponse)
-        res.status(200).json(openAIResponse)
+        // res.status(200).json(openAIResponse)
     }
 
     if (prediction === 'Codex') {
-        res.status(200).json("Codex (api not connected yet)")
+        // res.status(200).json("Codex (api not connected yet)")
     }
 
     if (prediction === 'DALLE-2') {
         const response = await openAIDALLE2(prompt)
         console.log("Image url: " + response)
-        res.status(200).json(response)
+        // res.status(200).json(response)
     }
 
- 
-
-
-    // console.log(result)
-
-    // res.status(200).json(openAIResponse)
 }
 
 

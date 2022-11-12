@@ -1,5 +1,5 @@
 const express = require('express')
-const { cohereClassification } = require('../controllers/cohereController')
+const { cohereClassification } = require('../controllers/baseController')
 
 const router = express.Router()
 

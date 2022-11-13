@@ -1,5 +1,5 @@
 const { openAIGPT3, openAIDALLE2 } = require('./openAIController')
-const { triageData } = require('./data');
+const { triageData } = require('../data/triageData');
 
 
 const cohere = require('cohere-ai');

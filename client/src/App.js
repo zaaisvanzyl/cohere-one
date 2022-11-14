@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './App.css';
+import Navbar from './components/Navbar';
 import Home from './pages/Base';
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <BrowserRouter>
         <div className="flex relative bg-main-dark-bg">
           <div className='bg-main-dark-bg  w-full min-h-screen flex-2 '>
+            <Navbar />
             <div>
               <Routes>
                 <Route path="/" element={<Home />} />

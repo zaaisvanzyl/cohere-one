@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 const Sandbox = () => {
 
-    const [prompt, setPrompt] = useState("Write a book");
+    const [prompt, setPrompt] = useState("List three colors");
     const [isLoading, setIsLoading] = useState(false);
 
     return (
@@ -32,7 +32,7 @@ const Sandbox = () => {
                             rounded-md text-white bg-sky-500/50 hover:bg-sky-500
                             focus:outline-none focus:ring-2 focus:ring-offset-2
                             focus:ring-indigo-500">
-                                Build
+                                Go
                             </button>
                             {isLoading && <p className='text-gray-200 py-2'>Loading...</p>}
                         </div>

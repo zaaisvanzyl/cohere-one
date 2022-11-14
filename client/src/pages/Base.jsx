@@ -9,7 +9,7 @@ const Sandbox = () => {
     return (
     <div className='p-20 px-20'>
         <form>
-            <div className="flex flex-row pt-20">
+            <div className="pt-20">
                 <div className='basis-3/4 text-gray-200 bg-darkdiv rounded-2xl p-3 m-3'>
                     <div>
                         <textarea
@@ -38,11 +38,11 @@ const Sandbox = () => {
                         </div>
                     </div>
                 </div>
-                <div className='basis-1/4 text-gray-200 bg-darkdiv rounded-2xl p-6 m-3'>
+                {/* <div className='basis-1/4 text-gray-200 bg-darkdiv rounded-2xl p-6 m-3'>
                     <div>
                         <p>Log</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </form>
     </div>
